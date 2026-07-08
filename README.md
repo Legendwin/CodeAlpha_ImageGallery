@@ -1,75 +1,92 @@
 # CodeAlpha ImageGallery
 
-A lightweight, responsive image gallery for browsing, viewing, and organizing collections of images. This repository contains the source code and assets for a web-based gallery application that emphasizes simplicity, accessibility, and fast performance.
+A modern, responsive image gallery application built with vanilla JavaScript and HTML5. Browse beautiful images from the Pexels API with an elegant user interface featuring dark/light theme support, search functionality, and a lightbox modal viewer.
 
 ## Features
 
-- Responsive layout that works on desktop and mobile
-- Grid and fullscreen viewing modes
-- Keyboard and touch navigation support
-- Lazy loading for fast initial load
-- Easily configurable (paths, thumbnails, and metadata)
+- 🖼️ **Dynamic Image Loading** - Fetches high-quality images from the Pexels API
+- 🔍 **Search Functionality** - Search and filter images by keywords
+- 🌓 **Dark/Light Theme** - Toggle between light and dark modes with persistent storage
+- 📱 **Responsive Design** - Adaptive masonry layout that works on all screen sizes
+- 🖱️ **Lightbox Viewer** - Full-screen image viewer with navigation controls
+- ⬆️ **Back to Top Button** - Quick navigation to the top of the page
+- ♿ **Accessible** - ARIA labels and semantic HTML for better accessibility
+- 📦 **Lightweight** - No external dependencies, pure vanilla JavaScript
 
-## Demo
+## Project Structure
 
-If you have a running instance, open the app in your browser to view your gallery. If you want to run it locally, follow the installation steps below.
+```
+Image Gallery/
+├── index.html      # Main HTML structure
+├── style.css       # Styling and theme variables
+└── script.js       # JavaScript functionality
+```
 
-## Installation
+## Getting Started
 
-1. Clone the repository:
+### Prerequisites
 
-   ```bash
-   git clone https://github.com/Legendwin/CodeAlpha_ImageGallery.git
-   cd CodeAlpha_ImageGallery
-   ```
-
-2. Install dependencies (if the project uses a package manager like npm or yarn):
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Start the development server (adjust the command for your project):
-
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
-
-4. Open `http://localhost:3000` (or the address printed in your terminal) in your browser.
-
-If this project is static HTML, simply open `index.html` in your browser or serve the folder with a simple static server (for example, `npx http-server`).
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- Internet connection (for Pexels API access)
 
 ## Usage
 
-- Add images to the configured images directory (or upload via the app if supported).
-- Thumbnails will appear in the grid layout; click or tap an image to open it fullscreen.
-- Use arrow keys or swipe gestures to navigate between images.
+### Features Explained
 
-## Development
+- **Search Images**: Type a keyword in the search box at the top to filter images
+- **Toggle Theme**: Click the moon/sun icon in the navigation bar to switch between dark and light modes
+- **View Full Size**: Click on any image to open it in the lightbox modal
+- **Navigate in Lightbox**: Use arrow buttons or keyboard arrows to navigate through images
+- **Load More**: Click the "More" button to load additional images
+- **Back to Top**: Click the arrow button in the bottom-right corner to scroll to the top
 
-- Follow the repository structure and run the development server as described above.
-- Create feature branches for changes and open pull requests against the default branch.
-- Run any available linting and tests before submitting changes.
+### Keyboard Shortcuts
 
-## Contributing
+- **←/→ Arrow Keys**: Navigate between images in lightbox
+- **ESC**: Close the lightbox modal
 
-Contributions are welcome. Please:
+## Technical Details
 
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/your-feature`).
-3. Commit your changes and push to your branch.
-4. Open a pull request describing your changes.
+### API Integration
 
-Please follow any coding style or contribution guidelines if they exist in the repository.
+The gallery uses the **Pexels API** for image content:
+- Endpoint: `https://api.pexels.com/v1/`
+- Authentication: API Key-based
+- Rate Limit: 200 requests per hour for free tier
 
-## License
+### Theme System
 
-Include the appropriate license for your project (for example, MIT). If you don't have a license file yet, add one in the repo root (`LICENSE`).
+The application uses CSS custom properties (variables) for theming:
 
-## Contact
+**Light Theme:**
+- Background: Light gray (#f5f5f5)
+- Cards: Darker gray (#e4e4e4)
+- Text: Black (#000000)
 
-For questions or feedback, open an issue in this repository or reach out to the maintainer: Legendwin.
+**Dark Theme:**
+- Background: Dark (#0b0c0e)
+- Cards: Slightly lighter dark (#0f1113)
+- Text: Green tint (#1B5E20)
+
+### Responsive Breakpoints
+
+- Desktop: 3-column layout
+- Tablet: 2-column layout
+- Mobile: 1-column layout (auto-adjusts based on screen width)
+
+## Browser Compatibility
+
+- Chrome/Chromium: ✅ Full support
+- Firefox: ✅ Full support
+- Safari: ✅ Full support (12+)
+- Edge: ✅ Full support
+- IE: ❌ Not supported (uses ES6+ features)
+
+## Author
+
+**Legendwin** - [GitHub Profile](https://github.com/Legendwin)
+
+## Acknowledgments
+
+- Images provided by [Pexels](https://www.pexels.com/) - A source of free stock photos
+- Inspired by modern web design practices and accessibility standards
